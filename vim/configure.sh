@@ -19,6 +19,27 @@ else ## install pathogen
 
 	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pathogen.vim
 fi
-	  
+
+# myPlugininstaller name  "repo" path
+function myPluginInstaller() {
+	if [ -d ~/.vim/bundle/$1 ]
+	then # do nothing
+		echo -e "$1.vim ... [\e[32:1mok\e[0m]";
+	else # install node.vim
+		git clone https://github.com/$2 ~/.vim/bundle/$3
+		echo -e "$1.vim ... [\e[32:1mInstalled\e[0m]";
+
+	fi
+}
+
+## install node.vim
+myPluginInstaller node "moll/vim-node.git" node
+## install surround.vim
+myPluginInstaller surround "tpope/vim-surround.git" surround
+## install nerdtree.vim
+myPluginInstaller nerdtree "scrooloose/nerdtree.git" nerdtree
+
+
+
 
 	
