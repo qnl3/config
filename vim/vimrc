@@ -1,0 +1,8 @@
+set nocompatible              " be iMproved, required
+
+execute pathogen#infect()
+
+filetype plugin indent on    " required
+
+syntax on 
+
