@@ -26,19 +26,20 @@ function myPluginInstaller() {
 	then # do nothing
 		echo -e "$1.vim ... [\e[32:1mok\e[0m]";
 	else # install node.vim
-		git clone https://github.com/$2 ~/.vim/bundle/$3
+		git clone $2 ~/.vim/bundle/$3
 		echo -e "$1.vim ... [\e[32:1mInstalled\e[0m]";
 
 	fi
 }
 
 ## install node.vim
-myPluginInstaller node "moll/vim-node.git" node
+myPluginInstaller node "https://github.com/moll/vim-node.git" node
 ## install surround.vim
-myPluginInstaller surround "tpope/vim-surround.git" surround
+myPluginInstaller surround "https://github.com/tpope/vim-surround.git" surround
 ## install nerdtree.vim
-myPluginInstaller nerdtree "scrooloose/nerdtree.git" nerdtree
-
+myPluginInstaller nerdtree "https://github.com/scrooloose/nerdtree.git" nerdtree
+## install auto-pair.vim
+myPluginInstaller auto-pairs "https://github.com/jiangmiao/auto-pairs.git" auto-pairs
 
 
 
