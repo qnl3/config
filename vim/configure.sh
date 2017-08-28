@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# install vimrc 
+rsync -avz --progress vimrc ~/.vimrc
 # install pathogen if not already installed
 if [ -f ~/.vim/autoload/pathogen.vim ]
 then ## do nothing ;
