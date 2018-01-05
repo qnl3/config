@@ -1,7 +1,16 @@
 
-" ---- configuration ---- 
+" ---- plugins ----
 call plug#begin('~/.config/nvim/site/plug')
 
+Plug 'Shougo/deoplete.vim', { 'do': ':UpdateRemotePlugins' }
+Plug 'https://github.com/tpope/vim-surround.git'
+Plug 'https://github.com/scrooloose/nerdtree.git'
+Plug 'https://github.com/jiangmiao/auto-pairs.git'
+Plug 'https://github.com/fatih/vim-go.git'
+
+call plug#end()
+
+" ---- configuration ---- 
 filetype plugin indent on    " required
 
 syntax on 

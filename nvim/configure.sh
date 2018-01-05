@@ -1,38 +1,31 @@
 #!/bin/bash
 
 ConfigFolder="$HOME/.config/nvim"
+DataFolder="$HOME/.local/share/nvim/site"
 ConfigFile="$ConfigFolder/init.vim"
-PluginDir="$ConfigFolder/nvim/site/plug"
+
+PluginFolder="/nvim/site/plug"
 
 # install configuration file 
 cp -f init.vim $ConfigFile
 
-# install plugin manager
 
+## install vim-plug
+if [ ! -f $DataFolder/autoload/plug.vim ];then
+	echo "[installing] vim-plug - plugin manager"
+	curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+else
+	echo "[skiped] vim-plug - already installed"
+fi
 
-# myPlugininstaller name  "repo" path
-function myPluginInstaller() {
-	if [ -d $HOME/.vim/pack/plugins/start/$1 ]
-	then # do nothing
-		echo -e "$1.vim ... updating";
-		cd "$HOME/.vim/pack/plugins/start/$3"
-		git pull
-	else # install or update plugin
-		git clone $2 $HOME/.vim/pack/plugins/start/$3
-		echo -e "$1.vim ... Installed";
-	fi
-}
-
-## install node.vim
-myPluginInstaller node "https://github.com/moll/vim-node.git" node
 ## install surround.vim
-myPluginInstaller surround "https://github.com/tpope/vim-surround.git" surround
+#myPluginInstaller surround "https://github.com/tpope/vim-surround.git" surround
 ## install nerdtree.vim
-myPluginInstaller nerdtree "https://github.com/scrooloose/nerdtree.git" nerdtree
+#myPluginInstaller nerdtree "https://github.com/scrooloose/nerdtree.git" nerdtree
 ## install auto-pair.vim
-myPluginInstaller auto-pairs "https://github.com/jiangmiao/auto-pairs.git" auto-pairs
+#myPluginInstaller auto-pairs "https://github.com/jiangmiao/auto-pairs.git" auto-pairs
 ## install vim-go 
-myPluginInstaller vim-go "https://github.com/fatih/vim-go.git" vim-go
+#myPluginInstaller vim-go "https://github.com/fatih/vim-go.git" vim-go
 
-
+nvim +PlugInstall +qall
 	
