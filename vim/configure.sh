@@ -7,13 +7,14 @@ mkdir -p ~/.vim/pack/plugins
 
 # myPlugininstaller name  "repo" path
 function myPluginInstaller() {
-	if [ -d ~/.vim/pack/plugins/start/$1 ]
+	if [ -d $HOME/.vim/pack/plugins/start/$1 ]
 	then # do nothing
-		echo -e "$1.vim ... [\e[32:1mok\e[0m]";
-	else # install node.vim
-		git clone $2 ~/.vim/bundle/$3
-		echo -e "$1.vim ... [\e[32:1mInstalled\e[0m]";
-
+		echo -e "$1.vim ... updating";
+		cd "$HOME/.vim/pack/plugins/start/$3"
+		git pull
+	else # install or update plugin
+		git clone $2 $HOME/.vim/pack/plugins/start/$3
+		echo -e "$1.vim ... Installed";
 	fi
 }
 
@@ -25,6 +26,10 @@ myPluginInstaller surround "https://github.com/tpope/vim-surround.git" surround
 myPluginInstaller nerdtree "https://github.com/scrooloose/nerdtree.git" nerdtree
 ## install auto-pair.vim
 myPluginInstaller auto-pairs "https://github.com/jiangmiao/auto-pairs.git" auto-pairs
+## install vim-go 
+myPluginInstaller vim-go "https://github.com/fatih/vim-go.git" vim-go
+## install deoplete-goo 
+myPluginInstaller deoplete-go "https://github.com/fatih/vim-go.git" deoplete-go
 
 
 
