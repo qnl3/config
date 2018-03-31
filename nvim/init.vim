@@ -4,16 +4,20 @@ call plug#begin('~/.config/nvim/site/plug')
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-go', { 'do': 'make'}
-Plug 'tpope/vim-surround.git'
+" Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree.git'
-Plug 'jiangmiao/auto-pairs.git'
-Plug 'fatih/vim-go.git'
+Plug 'jiangmiao/auto-pairs'
+Plug 'fatih/vim-go'
+Plug 'google/vim-jsonnet'
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
 " ---- Initialize plugins ----
 " Enable deoplete on startup
 let g:deoplete#enable_at_startup = 1
-
+let g:deoplete#enable_on_insert_enter = 1
+let g:deoplete#enable_refresh_always = 0
+let g:deoplete#auto_complete_delay = 50
 " ---- vim configuration ---- 
 filetype plugin indent on    " required
 
