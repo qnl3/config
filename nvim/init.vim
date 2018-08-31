@@ -45,3 +45,7 @@ autocmd Filetype json setlocal ts=2 sts=2 sw=2
 
 " nvim-go variables
 let g:go#debug = 1
+
+" deoplete tab-completion
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
