@@ -5,10 +5,10 @@ call plug#begin('~/.config/nvim/site/plug')
 " Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree.git'
 Plug 'jiangmiao/auto-pairs'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go'
 Plug 'google/vim-jsonnet'
 Plug 'scrooloose/nerdtree'
-Plug 'zchee/nvim-go', { 'do': 'make'}
+"Plug 'zchee/nvim-go', { 'do': 'make'}
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim'
