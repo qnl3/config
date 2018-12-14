@@ -41,4 +41,3 @@ go get -u github.com/nsf/gocode
 #myPluginInstaller vim-go "https://github.com/fatih/vim-go.git" vim-go
 
 nvim +PlugInstall +qall
-nvim +UpdateRemotePlugins +qall
