@@ -4,6 +4,9 @@ ConfigFolder="$HOME/.config/nvim"
 DataFolder="$HOME/.local/share/nvim/site"
 ConfigFile="$ConfigFolder/init.vim"
 
+mkdir -p $ConfigFolder
+mkdir -p $DataFolder
+
 PluginFolder="/nvim/site/plug"
 
 # install configuration file 
