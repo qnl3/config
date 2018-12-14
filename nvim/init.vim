@@ -9,6 +9,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'fatih/vim-go'
 Plug 'google/vim-jsonnet'
 Plug 'scrooloose/nerdtree'
+Plug 'zchee/nvim-go', { 'do': 'make'}
+
 call plug#end()
 
 " ---- Initialize plugins ----
@@ -65,4 +67,10 @@ set foldlevel=6 " resonable default fold level
 
 " setup custom indent by filetype
 autocmd Filetype json setlocal ts=2 sts=2 sw=2
+
+" nvim-go variables
+let g:go#debug = 1
+
+" deoplete tab-completion
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
