@@ -53,6 +53,9 @@ let g:deoplete#sources.rust = ['LanguageClient']
 let g:deoplete#sources.c = ['LanguageClient']
 let g:deoplete#sources.vim = ['vim']
 
+" --- allow alpine linux neivim v0.3.1r to use vim-go ---
+let g:go_version_warning = 0
+
 " ---- vim configuration ---- 
 filetype plugin indent on    " required
 
