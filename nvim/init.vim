@@ -1,8 +1,7 @@
 
 " ---- plugins ----
 call plug#begin('~/.config/nvim/site/plug')
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-go', { 'do': 'make'}
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree.git'
 Plug 'jiangmiao/auto-pairs'
@@ -10,6 +9,16 @@ Plug 'fatih/vim-go'
 Plug 'google/vim-jsonnet'
 Plug 'scrooloose/nerdtree'
 Plug 'zchee/nvim-go', { 'do': 'make'}
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
+Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 call plug#end()
 
