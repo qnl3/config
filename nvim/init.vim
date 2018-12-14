@@ -11,7 +11,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'zchee/nvim-go', { 'do': 'make'}
 
 if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'Shougo/deoplete.nvim'
 else
   Plug 'Shougo/deoplete.nvim'
   Plug 'roxma/nvim-yarp'
