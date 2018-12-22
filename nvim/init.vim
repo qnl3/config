@@ -2,6 +2,7 @@
 " ---- plugins ----
 call plug#begin('~/.config/nvim/site/plug')
 Plug 'fatih/vim-go'
+Plug 'm-kat/aws-vim'
 Plug 'google/vim-jsonnet'
 Plug 'jiangmiao/auto-pairs'
 Plug 'patstockwell/vim-monokai-tasty'
