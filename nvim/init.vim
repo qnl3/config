@@ -1,6 +1,6 @@
 
 " ---- plugins ----
-call plug#begin('~/.config/nvim/site/plug')
+call plug#begin('~/.local/share/nvim/plug')
 Plug 'fatih/vim-go'
 Plug 'm-kat/aws-vim'
 Plug 'google/vim-jsonnet'
